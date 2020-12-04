@@ -10,10 +10,10 @@ Create three tabs (VPN, NMAP, HACK).
 First scans
 
 ```
-# nmap -sV -A -oN output.txt. <ip address>
+# nmap -sV -sC -A -oN <ip address.txt>  <ip address>
 ```
 
-search in metasploit
+start and search in metasploit
 
 ```
 # msfconsole
@@ -26,6 +26,14 @@ Review the excellent ranked modules
 msf5> info /exploit/linux/samba
 msf5> info /exploit/multi/samba/usermap_script
 ```
+
+Note: can use searchsploit to avoid the startup
+
+```
+# searchsploit <service> <version>
+```
+
+
 ## Attack
 
 To execute
