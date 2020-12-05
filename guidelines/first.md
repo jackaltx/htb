@@ -9,7 +9,7 @@ Create three tabs (VPN, NMAP, HACK).
 
 First comes nmap.
 ```
-# nmap -p- -sV -sC -A -oN <ip address.txt> [ -oA <ip address> ]  <ip address>
+# nmap -p- -T4 -sV -sC -A -oN <ip address.txt> [ -oA <ip address> ]  <ip address>
 ```
 
 ### HTTP
