@@ -1,4 +1,4 @@
-# First Box
+# Guidelines and Aproaches
 
 ## Terminal setup
 
