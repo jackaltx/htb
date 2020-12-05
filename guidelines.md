@@ -7,23 +7,33 @@ Create three tabs (VPN, NMAP, HACK).
 
 ## Enumeration
 
-First scans
-
+First comes nmap.
 ```
 # nmap -p- -sV -sC -A -oN <ip address.txt> [ -oA <ip address> ]  <ip address>
 ```
 
+### HTTP
+if there is a web server open then you can use the NICTO web vulnerability scanner. 
 ```
 # nikto -h http:\\<<ip address>
 ```
+use browser to see if you can see any special files.
+```
+http://<ip address>/../../../../etc/password
+```
+another tack is to user DIRBUSTER with medium word list
 
-use browser to see if you can see files
+### SMB
 
 ```
-http://<ip address</../../../../etc/password
+nmap --script smb-vuln* -p 445 <ip address>
 ```
 
-dirbuster with medium word list
+use -N to suppress password promt
+```
+smbclient –L <ip address>
+```
+
 
 ## after foothold
 
