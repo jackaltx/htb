@@ -26,14 +26,34 @@ another tack is to user DIRBUSTER with medium word list
 ### SMB
 
 ```
-nmap --script smb-vuln* -p 445 <ip address>
+# nmap --script smb-vuln* -p 445 <ip address>
 ```
 
-use -N to suppress password promt
+TODO: describe
 ```
-smbclient –L <ip address>
+# cackmapexec smb \\<ip address>
+# cackmapexec smb \\<ip address> --shares
 ```
 
+use -N to suppress password prompt. Using the 'invalid' user with a <cr> password will connect with a 'guest' session.
+```
+# smbclient -U invalid –L \\<ip address>
+```
+
+If nothing works, use smbmap as above which will show permissions on any shares
+```
+# smbmap -U invalid –L \\<ip address>
+```
+
+If you can mount profiles$ and there are any intersting user then you can collect them in a  file of usernames 
+```
+# smbclient -U <username>%invalid –L \\<ip address> -c ls | awk { print $1 } > users.txt
+```
+
+If this is a Domain Controller then use a kerberos preauthentication hack
+```
+$ kerburte userenum -dc <ip address> -d <domain name> users.txt
+``
 
 ## after foothold
 
