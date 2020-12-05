@@ -20,21 +20,19 @@ First scans
 use browser to see if you can see files
 
 ```
-http://<ip address/../../../../../etc.password
+http://<ip address</../../../../etc/password
 ```
 
 dirbuster with medium word list
 
 ## after foothold
 
+To provides a moderately stable shell look for python or python3
 ```
 python3 -c "import pty;pty.spawn('bin/bash')
 ```
 
-upload lame - LinEnum.sh
-
-on local machine
-
+download (LinEnum.sh)[https://github.com/rebootuser/LinEnum] to machine.  One way is to use a python server
 ```
 $ sudo python -m Simple/HttpServer 80
 ```
