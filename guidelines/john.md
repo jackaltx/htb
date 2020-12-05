@@ -1,12 +1,35 @@
+$ Crackers on Kali 2020
+
+
 # John the Ripper on Kali 2020
 
-Word lists
+at this time version is 1.9.0, but it is rolling 
+
+###  Variations
+
+```
+bitlocker2john
+dmg2john
+gpg2john
+hccap2john
+john
+keepass2john
+putty2john
+racf2john
+rar2john
+uaf2john
+vncpcap2john
+wpapcap2john
+zip2john
+```
+
+### Word lists
 ```
 # ls /usr/share/wordlists
 dirb  dirbuster  dnsmap.txt  fasttrack.txt  fern-wifi  metasploit  nmap.lst  rockyou.txt.gz  seclists  wfuzz
 ```
 
-Encryptions used:
+### Encryptions used:
 - UNIX crypt(3)
 - Traditional DES-based
 - “bigcrypt”
@@ -19,6 +42,7 @@ Encryptions used:
 - SHA-crypt hashes (newer versions of Fedora and Ubuntu)
 - SHA-crypt and SUNMD5 hashes (Solaris)
 
+### Man page
 ```
 # john -h
 Created directory: /root/.john
