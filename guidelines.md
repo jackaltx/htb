@@ -32,7 +32,8 @@ To provides a moderately stable shell look for python or python3
 python3 -c "import pty;pty.spawn('bin/bash')
 ```
 
-download (LinEnum.sh)[https://github.com/rebootuser/LinEnum] to machine.  One way is to use a python server
+The goal is to get user access, so getting access is best
+Download (LinEnum.sh)[https://github.com/rebootuser/LinEnum] to machine.  One way is to use a python server
 ```
 $ sudo python -m Simple/HttpServer 80
 ```
