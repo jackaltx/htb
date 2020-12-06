@@ -17,12 +17,16 @@ if there is a web server open then you can use the NICTO web vulnerability scann
 ```
 # nikto -h http:\\<<ip address>
 ```
-use browser to see if you can see any special files.
+use browser to check for LFI (Local File Inclusion) if you can view the data of any special files.
 ```
 http://<ip address>/../../../../etc/password
 ```
 another tack is to user DIRBUSTER with medium word list
 
+Gobuster 3.X.X is newer and has a lot more features it can be used with the following:
+```
+gobuster dir -u http://<ip address> -w /location/of/wordlist.txt
+```
 ### SMB
 
 ```
