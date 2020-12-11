@@ -63,7 +63,7 @@ $ kerburte userenum -dc <ip address> -d <domain name> users.txt
 
 To provides a moderately stable shell look for python or python3
 ```
-python3 -c "import pty;pty.spawn('bin/bash')
+python3 -c "import pty;pty.spawn('bin/bash')"
 ```
 
 The goal is to get user access, so getting access is best
