@@ -8,13 +8,11 @@ Create three tabs (VPN, NMAP, HACK).
 ## Enumeration
 
 First scans
-
 ```
 # nmap -sV -sC -A -oN <ip address.txt>  <ip address>
 ```
 
-start and search in metasploit
-
+Note the smb on ports 129 and 446.  Start metasploit console and search for samba
 ```
 # msfconsole
 
