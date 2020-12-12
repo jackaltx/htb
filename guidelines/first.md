@@ -7,7 +7,7 @@ Create three tabs (VPN, NMAP, HACK).
 
 ## Enumeration
 
-First comes nmap.
+First comes nmap.  Note -oA is handy for using zenmap, but it not on kali 
 ```
 # nmap -p- -T4 -sV -sC -A -oN <ip address.txt> [ -oA <ip address> ]  <ip address>
 ```
@@ -15,7 +15,7 @@ First comes nmap.
 ### HTTP
 if there is a web server open then you can use the NICTO web vulnerability scanner. 
 ```
-# nikto -h http:\\<<ip address>
+# nikto -h http://<<ip address>
 ```
 use browser to check for LFI (Local File Inclusion) if you can view the data of any special files.
 ```
